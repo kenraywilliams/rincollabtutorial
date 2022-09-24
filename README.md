@@ -44,10 +44,14 @@ ggplot(mtcars, aes(mpg, wt)) +
   geom_smooth(method = lm) 
 ```
 The result is the following:
+
 ![GGPLOT](images/ggplot.png)
+
 So we can see that plots are also nicely integrated within the notebook.
 
 ## Conclusion
+
+Google Colab provides very easy access to a R runtime environment.
 
 ## Sources
 

@@ -12,11 +12,11 @@
 ## Introduction
 
 Google Colab or Google Colaboratory is an online free tool provided by Google.
-This tool gives access to some compute resources, including GPU hardware, to anybody with just a Google account, internet access and a browser.
+This tool gives access to some computer resources, including GPU hardware, to anybody with just a Google account, internet access and a browser.
 The idea is to use this available computer power through notebooks and it is focused on data analysis and machine learning tasks.
 It is primarily intended for Python code, but it is also possible to use this tool with the R programming language.
 This short tutorial provides a simple step by step guide on how to run R code in Google Colab.
-Even though there seems to be a way to use the rpy2 Python package and use run through the Python interpreter, this tutorial focuses on the direct use of the R runtime.
+Even though there is a way to use the rpy2 Python package and use run through the Python interpreter, this tutorial focuses on the direct use of the R runtime.
 
 ## Step by Step
 

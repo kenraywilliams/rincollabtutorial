@@ -35,6 +35,17 @@ Let's check the version that we are using:
 ![R Version](images/colab_R_version.png)
 
 ### 4. Plotting
+Lastly, let us test how plots are shown using this platform.
+Let's try the following code:
+```
+library(ggplot2)
+ggplot(mtcars, aes(mpg, wt)) +
+  geom_point() +
+  geom_smooth(method = lm) 
+```
+The result is the following:
+![GGPLOT](images/ggplot.png)
+So we can see that plots are also nicely integrated within the notebook.
 
 ## Conclusion
 

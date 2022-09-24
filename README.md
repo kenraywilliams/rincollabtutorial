@@ -32,7 +32,7 @@ Try a sample R code line, e.g. `test <- 123` and hit the play button on the left
 The numeric variable test will be created with value $123$.
 It is possible to verify the value of the variable by using the input `test` and running the cell again.
 Let's check the version that we are using:
-![R Version](images/colab_3_version.png)
+![R Version](images/colab_R_version.png)
 
 ### 4. Plotting
 

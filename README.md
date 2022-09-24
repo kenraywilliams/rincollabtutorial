@@ -26,9 +26,15 @@ The current tutotorial has been prepared using the latest version of Google Chro
 Without a Google Account an error window stating 'Google sign-in required'  will be shown.
 In any case, most people would like to keep their work from one session to the next and have the capacity of sharing notebooks with others.
 ### 3. Go to the Google Colab Site
-The user will be prompted to select ...
+Use the url [https://colab.to/r](https://colab.to/r).
+An empty notebook will automaticall be opened.
+Try a sample R code line, e.g. `test <- 123` and hit the play button on the left or "Runtime->Run the focused line in the menu".
+The numeric variable test will be created with value $123$.
+It is possible to verify the value of the variable by using the input `test` and running the cell again.
+Let's check the version that we are using:
+![R Version](images/colab_3_version.png)
 
-### 4. 
+### 4. Plotting
 
 ## Conclusion
 

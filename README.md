@@ -53,7 +53,7 @@ The result is the following:
 
 ![GGPLOT](images/ggplot.png)
 
-So we can see that plots are also nicely integrated within the notebook.
+So we can see that plots are also nicely integrated within the notebook. You may also notice that the library(datasets) is already installed in the Google Colab R runtime environment as there was no need to load/attach the datasets package.
 
 ## Conclusion
 

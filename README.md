@@ -32,9 +32,11 @@ Try a sample R code line, e.g. `test <- 123` and hit the play button on the left
 The numeric variable test will be created with value $123$.
 It is possible to verify the value of the variable by typing the input "test" and running the cell again.
 Let's check the version that we are using by typing "R.version()" and running the cell:
+
 ![R Version](images/colab_R_version.png)
 
 It is also possible to upload files such as datasets by clicking the folder icon (called "Files") on the left hand pane and clicking the upload button (called "Upload to session storage") button. This could be useful if you wish to add your own data, but you must save it (or download it) again before the session is over to prevent it from being lost.
+
 ![Files](images/folders.jpeg)
 
 ### 4. Plotting

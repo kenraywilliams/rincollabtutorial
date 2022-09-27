@@ -35,7 +35,7 @@ Let's check the version that we are using by typing "R.version()" and running th
 ![R Version](images/colab_R_version.png)
 
 It is also possible to upload files such as datasets by clicking the folder icon (called "Files") on the left hand pane and clicking the upload button (called "Upload to session storage") button. This could be useful if you wish to add your own data, but you must save it (or download it) again before the session is over to prevent it from being lost.
-![Files](images.folders.jpeg)
+![Files](images/folders.jpeg)
 
 ### 4. Plotting
 Lastly, let us test how plots are shown using this platform.

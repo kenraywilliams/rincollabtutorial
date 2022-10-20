@@ -1,13 +1,21 @@
 #Programming in R - Exercises of basic concepts ============
+
 ##Libraries to load and packages to install-----------------
+
 options(repos = c(CRAN = "http://cran.rstudio.com")) 
 
 if (!require(parallel)) install.packages("parallel") 
+
 if (!require(doParallel)) install.packages("doParallel") 
+
 if (!require(foreach)) install.packages("foreach") 
+
 library(parallel) 
+
 library(doParallel) 
+
 library(foreach)
+
 
 ###Exercise I------------------------------------------------
 
@@ -52,7 +60,7 @@ ex1h <- paste("label", seq(1,30), sep="-"); ex1h
 #(i)
 x <- seq(0.1, 1, 0.1)
 ex1i <- x^2*exp(x); ex1i
-# [1] 0.01105171 0.04885611 0.12148729 0.23869195 0.41218032 0.65596277 0.98673883 1.42434619 1.99227852
+#[1] 0.01105171 0.04885611 0.12148729 0.23869195 0.41218032 0.65596277 0.98673883 1.42434619 1.99227852
 #[10] 2.71828183
 
 ###Exercise II------------------------------------------------

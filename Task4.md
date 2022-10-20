@@ -53,16 +53,22 @@ ex1f <- ex1e[1:28]; ex1f
 ex1g <- paste("label", seq(1,30)); ex1g
 
 #[1] "label 1"  "label 2"  "label 3"  "label 4"  "label 5"  "label 6"  "label 7"  "label 8"  "label 9" 
+
 #[10] "label 10" "label 11" "label 12" "label 13" "label 14" "label 15" "label 16" "label 17" "label 18"
+
 #[19] "label 19" "label 20" "label 21" "label 22" "label 23" "label 24" "label 25" "label 26" "label 27"
+
 #[28] "label 28" "label 29" "label 30"
 
 #(h)
 ex1h <- paste("label", seq(1,30), sep="-"); ex1h
 
 #[1] "label-1"  "label-2"  "label-3"  "label-4"  "label-5"  "label-6"  "label-7"  "label-8"  "label-9" 
+
 #[10] "label-10" "label-11" "label-12" "label-13" "label-14" "label-15" "label-16" "label-17" "label-18"
+
 #[19] "label-19" "label-20" "label-21" "label-22" "label-23" "label-24" "label-25" "label-26" "label-27"
+
 #[28] "label-28" "label-29" "label-30"
 
 #(i)
@@ -70,6 +76,7 @@ x <- seq(0.1, 1, 0.1)
 ex1i <- x^2*exp(x); ex1i
 
 #[1] 0.01105171 0.04885611 0.12148729 0.23869195 0.41218032 0.65596277 0.98673883 1.42434619 1.99227852
+
 #[10] 2.71828183
 
 ###Exercise II------------------------------------------------

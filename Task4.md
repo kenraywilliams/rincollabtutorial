@@ -15,8 +15,8 @@ library(foreach)
 no_cores = 4
 cl = makeCluster(no_cores)
 registerDoParallel(cl)
-# on.exit(stopCluster(cl))
-# Look the number of workers actually created
+#on.exit(stopCluster(cl))
+#Look the number of workers actually created
 getDoParWorkers()
 
 ###Exercise I------------------------------------------------

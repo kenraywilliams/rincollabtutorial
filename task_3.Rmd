@@ -1,0 +1,97 @@
+---
+title: "Numerical MLE of Gamma Parameters"
+subtitle: "Task III. Programming in R. MSc Statistics for Data Science."
+author:
+  - "Kendal Raymond William Smith <100494805@alumnos.uc3m.es>"
+  - "Germán Blanco Blanco <100441287@alumnos.uc3m.es>"
+date: '2022-10-22'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+if (!require("maxLik")) install.packages("maxLik")
+
+library(maxLik)
+```
+
+# Problem Statement
+
+We are going to compare two different ways to approximate the parameters of a gamma distribution using R libraries.
+The first one uses the standard optimization package (optim and optimize functions) and the second one the MaxLik package.
+The input data will be a set of 5000 samples generated with the rgamma function.
+
+# Solution Using Standard Optimization Functions in R
+
+The following code generates a list of 5000 samples from a gamma distribution and calculates the log_likelihood for those samples.
+
+```{r}
+sample <- rgamma(5000, shape=3, rate=3)
+
+log_likelihood <- function(sample, alpha, beta) {
+  return(sum(log(dgamma(sample, shape=alpha, rate=beta))))
+}
+
+# This is log likelihood without parameters
+# It will be used in the next section
+
+ll <- function(x) {
+  alpha <- x[1]
+  beta <- x[2]
+  return(log_likelihood(sample, alpha, beta))
+}
+
+# This is the negative log likelihood without parameters
+# so that everything works without any more tweaks in optim
+
+nll <- function(x) {
+  return(-ll(x))
+}
+```
+
+Now we estimate the gamma parameters using the optim function.
+
+```{r}
+
+# Initial values given by the Method of Moments
+alpha_0 = mean(sample)^2/var(sample)
+beta_0 = alpha_0/mean(sample)
+
+optim(c(alpha_0, beta_0), nll)
+
+```
+
+We can also use initial values that are separated from the real values of the parameters to check that the method works also in this case.
+
+```{r}
+
+# Test with different initial values
+
+optim(c(2, 4), nll)
+
+```
+
+# Solution Using MaxLik Package
+
+The code using the MaxLik package is very similar, however it seems to work faster and with less iterations.
+
+```{r}
+
+# Initial values given by the Method of Moments
+maxLik(ll, start = c(alpha=alpha_0, beta=beta_0) )
+
+```
+
+```{r}
+
+# Different initial values
+maxLik(ll, start = c(alpha=2, beta=4) )
+
+```
+
+# Conclusion
+
+MaxLik provides a very similar interface to the optim function, but it uses different algorithms (in the example Newton-Raphson) and it seems to have integrated estimation of the gradient (Newton-Raphson requires use of the gradient, which is not provided to the MaxLik function).
